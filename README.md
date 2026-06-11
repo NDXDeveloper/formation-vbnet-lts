@@ -1,11 +1,11 @@
 # 💻 Formation Visual Basic .NET avec .NET 10 LTS
 
-![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)
-![.NET Version](https://img.shields.io/badge/.NET-10%20LTS-purple.svg)
-![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2026-blueviolet.svg)
-![VB](https://img.shields.io/badge/VB.NET-16.9%20(stabilisé)-informational.svg)
-![Modules](https://img.shields.io/badge/Modules-18-green.svg)
-![Language](https://img.shields.io/badge/Langue-Français-blue.svg)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)  
+![.NET Version](https://img.shields.io/badge/.NET-10%20LTS-purple.svg)  
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2026-blueviolet.svg)  
+![VB](https://img.shields.io/badge/VB.NET-16.9%20(stabilisé)-informational.svg)  
+![Modules](https://img.shields.io/badge/Modules-18-green.svg)  
+![Language](https://img.shields.io/badge/Langue-Français-blue.svg)  
 ![Mise à jour](https://img.shields.io/badge/Mise%20à%20jour-Juin%202026-brightgreen.svg)
 
 **Un guide progressif pour comprendre, maintenir et faire évoluer des applications VB.NET avec .NET 10 LTS — recentré sur ce que VB.NET fait réellement bien en 2026.**
