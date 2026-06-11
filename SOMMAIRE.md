@@ -139,7 +139,7 @@ en C# aujourd'hui**. À la place :
 
 ### 5. [Windows Forms — le scénario phare](05-windows-forms/README.md) ⭐ 🔄
 - 5.1 [Introduction, architecture et le Concepteur (Designer)](05-windows-forms/01-introduction-designer.md)
-- 5.2 [Windows Forms sur .NET 10 (modernisation : DI, mode sombre intégré, formulaires async `ShowAsync`/`ShowDialogAsync`)](05-windows-forms/02-winforms-net10.md) 🆕
+- 5.2 [Windows Forms sur .NET 10 (modernisation : mode sombre intégré, formulaires async `ShowAsync`/`ShowDialogAsync`, presse-papiers sécurisé)](05-windows-forms/02-winforms-net10.md) 🆕
 - 5.3 [Contrôles fondamentaux (`Form`, `Button`, `TextBox`, conteneurs, boîtes de dialogue)](05-windows-forms/03-controles-fondamentaux.md)
 - 5.4 [Contrôles avancés (`DataGridView`, `TreeView`/`ListView`, `MenuStrip`/`ToolStrip`/`StatusStrip`)](05-windows-forms/04-controles-avances.md)
 - 5.5 [Contrôles personnalisés et `UserControl`](05-windows-forms/05-controles-personnalises.md)
