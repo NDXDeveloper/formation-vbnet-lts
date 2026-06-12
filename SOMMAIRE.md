@@ -149,7 +149,7 @@ en C# aujourd'hui**. À la place :
 - 5.9 [Applications MDI et multi-formulaires](05-windows-forms/09-mdi.md)
 - 5.10 [Préférences et paramètres utilisateur (`My.Settings`)](05-windows-forms/10-preferences.md)
 - 5.11 [Internationalisation (i18n/l10n, ressources `.resx`)](05-windows-forms/11-internationalisation.md)
-- 5.12 [Nouveautés Windows Forms .NET 10 (presse-papiers JSON, `Form.ScreenCaptureMode` anti-capture, éditeurs de designer portés depuis .NET Framework)](05-windows-forms/12-nouveautes-net10.md) 🆕
+- 5.12 [Nouveautés Windows Forms .NET 10 (presse-papiers JSON, `Form.FormScreenCaptureMode` anti-capture, éditeurs de designer portés depuis .NET Framework)](05-windows-forms/12-nouveautes-net10.md) 🆕
 - 5.13 Déploiement → voir [module 15](15-deploiement-devops/README.md)
 
 ### 6. [WPF (Windows Presentation Foundation)](06-wpf/README.md)
@@ -224,7 +224,7 @@ en C# aujourd'hui**. À la place :
 - 10.2 [Quand déléguer à C# (perf/`Span`, records, source generators, Minimal APIs, Native AOT, Blazor/MAUI)](10-hybride-vbnet-csharp/02-quand-deleguer.md)
 - 10.3 [Isoler les fonctionnalités avancées dans des bibliothèques C#](10-hybride-vbnet-csharp/03-isoler-en-csharp.md)
 - 10.4 [Consommer ces bibliothèques de façon transparente depuis VB.NET](10-hybride-vbnet-csharp/04-consommer-depuis-vbnet.md)
-- 10.5 [Atelier : cœur en C# (performance/features), UI et métier en VB.NET](10-hybride-vbnet-csharp/05-atelier-core-csharp-ui-vbnet.md)
+- 10.5 [Atelier : cœur en C# (performance / fonctionnalités), UI et métier en VB.NET](10-hybride-vbnet-csharp/05-atelier-core-csharp-ui-vbnet.md)
 - 10.6 [Gérer une solution mixte (NuGet, projets, build, tests)](10-hybride-vbnet-csharp/06-solution-mixte.md)
 
 ### 11. [Migration et maintenance du code legacy](11-migration-legacy/README.md) ⭐
@@ -252,10 +252,10 @@ en C# aujourd'hui**. À la place :
 ### 13. [Tests et qualité du code](13-tests-qualite/README.md)
 - 13.1 [Tests unitaires (xUnit, NUnit, MSTest ; `Microsoft.Testing.Platform` dans .NET 10)](13-tests-qualite/01-tests-unitaires.md) 🆕
 - 13.2 [*Mocking* (Moq, NSubstitute) et TDD](13-tests-qualite/02-mocking-tdd.md)
-- 13.3 [Tests d'intégration (`WebApplicationFactory`, Testcontainers, tests avec BDD)](13-tests-qualite/03-tests-integration.md)
+- 13.3 [Tests d'intégration (`WebApplicationFactory`, Testcontainers, tests avec base de données)](13-tests-qualite/03-tests-integration.md)
 - 13.4 [Analyse statique (analyseurs Roslyn, SonarQube, StyleCop)](13-tests-qualite/04-analyse-statique.md)
 - 13.5 [Couverture de code ; génération de tests par IA](13-tests-qualite/05-couverture-tests-ia.md) 🤖
-- 13.6 [Benchmark.NET (notions)](13-tests-qualite/06-benchmarkdotnet.md)
+- 13.6 [BenchmarkDotNet (notions)](13-tests-qualite/06-benchmarkdotnet.md)
 
 ### 14. [Performance et gestion de la mémoire](14-performance/README.md)
 - 14.1 [Profilage (VS Profiler, `dotnet-counters`/`trace`/`dump`/`gcdump`)](14-performance/01-profilage.md)
@@ -320,7 +320,7 @@ lire le C# (omniprésent dans la doc et les réponses d'IA) et le transposer en 
 L'annexe de référence sur le périmètre. Pour chaque sujet *hors VB* : la raison, et comment le
 **consommer depuis VB.NET** via une bibliothèque C#.
 - B.1 Blazor (web front-end) — *Razor génère du C#*
-- B.2 .NET MAUI (UI multiplateforme mobile) — *pas de modèle VB, code UI en C#*
+- B.2 .NET MAUI et WinUI 3 (UI « modernes » multiplateforme et Windows) — *pas de modèle VB, code UI en C#*
 - B.3 Minimal APIs — *sans modèle, syntaxe contrainte*
 - B.4 Native AOT — *non pris en charge en pratique pour VB*
 - B.5 gRPC et GraphQL — *outillage orienté C#*
@@ -371,7 +371,7 @@ de .NET 10 et de C# 14.
 - **IA-first** 🤖 : un module complet sur le développement assisté, indispensable en VB.NET.
 - **Pragmatique** : maintenance de legacy, migration VB6 / .NET Framework, déploiement desktop réel.
 
-**Durée estimée** : ~30-40 h de lecture théorique ; 22-28 jours pour le parcours complet avec ateliers  
+**Durée estimée** : ~30-40 h de lecture théorique ; 22-28 jours pour le parcours complet en pratiquant les exemples  
 **Public** : développeurs VB.NET débutants à confirmés, équipes de maintenance et de migration legacy  
 **Prérequis** : bases en programmation recommandées
 
