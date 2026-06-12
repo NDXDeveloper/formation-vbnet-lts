@@ -1,0 +1,56 @@
+# ============================================================
+# Formation VB.NET (.NET 10 LTS) — .gitignore
+# Dépôt de contenu Markdown ; on ignore tout ce qui ne relève
+# pas de la formation elle-même.
+# ============================================================
+
+# --- Artefacts de build .NET (exemples compilés localement) ---
+bin/
+obj/
+out/
+TestResults/
+*.binlog
+project.lock.json
+*.nuget.props
+*.nuget.targets
+
+# --- Visual Studio / IDE ---
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.idea/
+.vscode/
+*.code-workspace
+
+# --- Éditeurs de texte ---
+# Kate
+*.kate-swp
+.*.kate-swp
+# Vim / sauvegardes génériques
+*.swp
+*.swo
+*~
+*.bak
+*.txt
+
+# --- Système d'exploitation ---
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+.AppleDouble
+# Linux
+.directory
+.Trash-*/
+
+# --- Fichiers de travail (jamais publiés) ---
+resultat*.txt
+*.tmp
+*.log
+
+
+
