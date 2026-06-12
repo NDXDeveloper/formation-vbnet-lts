@@ -62,7 +62,7 @@ depuis VB.NET**.
 - 📖 **8 annexes** — correspondance VB/C#, frontière VB/C#, bonnes pratiques, migration, références
 - 🇫🇷 **En français** — parce que c'est plus accessible
 
-**Durée estimée :** ~30-40 h de lecture théorique • 22-28 jours pour le parcours complet avec ateliers  
+**Durée estimée :** ~30-40 h de lecture théorique • 22-28 jours pour le parcours complet en pratiquant les exemples  
 **Niveau :** débutant à confirmé
 
 ---
@@ -137,7 +137,7 @@ Cette formation s'adresse à différents profils. Choisissez votre parcours :
 - 📊 **Entity Framework Core 10** — `LeftJoin` natif, *named query filters*, colonnes JSON, types complexes
 - 🌐 **ASP.NET Core** (Web API par contrôleurs) — OpenAPI 3.1, rate limiting intégré, *Problem Details*
 - ⚡ **Performance** — gains JIT / PGO / SIMD obtenus **gratuitement** via le runtime, sans changer le code
-- 🎨 **UI desktop** — WPF Fluent Design & thèmes ; WinForms (presse-papiers JSON, mode sombre intégré, formulaires async, `Form.ScreenCaptureMode`)
+- 🎨 **UI desktop** — WPF Fluent Design & thèmes ; WinForms (presse-papiers JSON, mode sombre intégré, formulaires async, `Form.FormScreenCaptureMode`)
 - ⚠️ **Délégué à C#** — Blazor, MAUI, Minimal APIs, Native AOT → voir **Annexe B « Frontière VB.NET / C# »**
 
 ### 📎 Les 8 annexes
@@ -271,7 +271,7 @@ formation-vbnet-lts/
 ├─ Partie 6 : Qualité, performance et exploitation
 └─ Partie 7 : IA et avenir (développement assisté, stratégie, roadmap)
 
-🎓 Total : ~30-40 h de lecture (22-28 jours avec ateliers, à 30 min-1 h/jour)
+🎓 Total : ~30-40 h de lecture (22-28 jours en pratiquant les exemples, à 30 min-1 h/jour)
 ```
 
 **🎯 Parcours Express (3-4 jours)** pour les pressés :
