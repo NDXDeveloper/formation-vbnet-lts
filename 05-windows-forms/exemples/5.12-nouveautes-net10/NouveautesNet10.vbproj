@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 5.12 : Nouveautes Windows Forms .NET 10
+  Description : Projet Windows Forms VB.NET (.NET 10) a cadre applicatif
+                (MyType=WindowsForms), structure comme le cree Visual Studio.
+  Fichier source : 12-nouveautes-net10.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>NouveautesNet10</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>NouveautesNet10.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+<!-- ============================================================================
+     Section 6.4 : Liaison de données
+     Description : Réunit les mécanismes de la section :
+                  · DataContext (source par défaut, fixé en code-behind) ;
+                  · liaison TwoWay avec UpdateSourceTrigger=PropertyChanged ;
+                  · convertisseur déclaré en ressource
+                    (BoolEnCouleurConverter -> Foreground) ;
+                  · StringFormat sans convertisseur ;
+                  · liaison ElementName (TextBlock suit la valeur du Slider) ;
+                  · ValidationRule (ChampRequisRule) sur un TextBox ;
+                  · liste liée à une ObservableCollection.
+     Fichier source : 04-data-binding.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataBindingWpf"
+        Title="6.4 — Liaison de données" Height="420" Width="520"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <local:BoolEnCouleurConverter x:Key="boolEnCouleur" />
+    </Window.Resources>
+
+    <StackPanel Margin="12">
+        <TextBlock Text="Édition du client courant (TwoWay) :" FontWeight="Bold" Margin="0,0,0,6" />
+
+        <!-- TwoWay + mise à jour à chaque frappe + ValidationRule -->
+        <TextBox Margin="0,4">
+            <TextBox.Text>
+                <Binding Path="Nom" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:ChampRequisRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <TextBox Text="{Binding Ville, UpdateSourceTrigger=PropertyChanged}" Margin="0,4" />
+        <CheckBox Content="Client actif" IsChecked="{Binding EstActif}" Margin="0,4" />
+
+        <!-- Le convertisseur : la couleur du texte suit EstActif -->
+        <TextBlock Margin="0,8"
+                   Text="{Binding Nom}"
+                   Foreground="{Binding EstActif, Converter={StaticResource boolEnCouleur}}" />
+
+        <!-- StringFormat, sans convertisseur -->
+        <TextBlock Text="{Binding DateInscription, StringFormat='Inscrit le {0:d}'}" Margin="0,4" />
+
+        <Separator Margin="0,8" />
+
+        <!-- Liaison ElementName : le TextBlock reflète la valeur du Slider -->
+        <TextBlock Text="Niveau (ElementName) :" />
+        <Slider x:Name="curseur" Minimum="0" Maximum="100" Value="40" />
+        <TextBlock Text="{Binding ElementName=curseur, Path=Value, StringFormat='Valeur : {0:F0}'}" />
+
+        <Separator Margin="0,8" />
+
+        <TextBlock Text="Clients (ObservableCollection) :" />
+        <ListBox x:Name="listeClients" Height="80" DisplayMemberPath="Nom" />
+    </StackPanel>
+</Window>

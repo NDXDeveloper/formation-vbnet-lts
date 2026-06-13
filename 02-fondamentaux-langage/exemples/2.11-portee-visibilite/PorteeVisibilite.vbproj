@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 2.11 : Portée, visibilité et modificateurs d'accès
+  Description : Projet console VB.NET (.NET 10) — portée de bloc/procédure,
+                six modificateurs d'accès (Friend = internal de C#),
+                défauts selon l'élément et asymétrie Structure/Class.
+  Fichier source : 11-portee-visibilite.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PorteeVisibilite</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

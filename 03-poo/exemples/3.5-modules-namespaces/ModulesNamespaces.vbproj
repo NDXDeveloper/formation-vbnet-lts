@@ -1,0 +1,19 @@
+<!-- =========================================================================
+  Section 3.5 : Modules, espaces de noms et classes partielles
+  Description : Projet console VB.NET (.NET 10). Le RootNamespace est
+                volontairement réglé sur « Contoso.Ventes » pour matérialiser
+                le piège de la section : tout Namespace déclaré dans le code
+                est IMBRIQUÉ sous cette racine (vérifié par FullName).
+  Fichier source : 05-modules-namespaces.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Contoso.Ventes</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

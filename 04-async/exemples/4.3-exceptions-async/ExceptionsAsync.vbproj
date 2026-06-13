@@ -1,0 +1,17 @@
+<!-- =========================================================================
+  Section 4.3 : Gestion des exceptions asynchrones
+  Description : Projet console VB.NET (.NET 10) — Try/Catch autour d'Await,
+                filtres When, AggregateException, pièges Async Sub.
+  Fichier source : 03-exceptions-async.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExceptionsAsync</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

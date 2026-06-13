@@ -1,0 +1,16 @@
+<!-- =========================================================================
+  Section 3.7 : Types immuables et records
+  Description : Bibliothèque C# de la solution hybride : les records que
+                VB.NET ne sait pas déclarer mais consomme parfaitement. 🔗
+  Fichier source : 07-immuabilite-records.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>ModeleCsharp</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

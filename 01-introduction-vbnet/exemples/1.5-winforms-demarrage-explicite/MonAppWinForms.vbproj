@@ -1,0 +1,26 @@
+<!-- =========================================================================
+  Section 1.5 : Premier projet pas à pas (Console et Windows Forms)
+  Description : Fichier projet identique à celui que génère
+                « dotnet new winforms -lang VB » : cible net10.0-windows,
+                UseWindowsForms, démarrage explicite par
+                <StartupObject>Sub Main</StartupObject>, et imports par
+                défaut supplémentaires (éléments <Import>).
+  Fichier source : 05-premier-projet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>MonAppWinForms</RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

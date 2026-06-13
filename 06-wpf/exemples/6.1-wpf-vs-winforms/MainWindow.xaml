@@ -1,0 +1,24 @@
+<!-- ============================================================================
+     Section 6.1 : Introduction ; WPF vs Windows Forms
+     Description : L'interface décrite EN XAML (déclaratif), exactement comme
+                  dans la section : un Grid qui centre un Button sans
+                  coordonnées en pixels, Click relié à un gestionnaire du
+                  code-behind. ⚠️ En VB, x:Class s'écrit SANS le namespace
+                  racine (« MainWindow », pas « WpfVsWinForms.MainWindow »).
+     Fichier source : 01-introduction-wpf-vs-winforms.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="6.1 — WPF vs Windows Forms" Height="220" Width="420"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <StackPanel Margin="16" VerticalAlignment="Center">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,12"
+                   Text="En WPF, l'interface est décrite en XAML : le Grid centre et dispose le bouton sans pixels, et un binding peut pré-remplir un champ — voir TextBox ci-dessous." />
+        <!-- Pré-remplissage par binding (sans code de plomberie) -->
+        <TextBox Text="{Binding NomClient}" Margin="0,0,0,12" />
+        <Button Content="Cliquez-moi" Width="120" Height="32"
+                Click="Bouton_Click" />
+    </StackPanel>
+</Window>

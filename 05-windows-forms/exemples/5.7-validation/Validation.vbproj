@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 5.7 : Validation
+  Description : Projet Windows Forms VB.NET (.NET 10) a cadre applicatif
+                (MyType=WindowsForms), structure comme le cree Visual Studio.
+  Fichier source : 07-validation.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ValidationDemo</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>ValidationDemo.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

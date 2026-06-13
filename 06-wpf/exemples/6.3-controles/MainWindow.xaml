@@ -1,0 +1,59 @@
+<!-- ============================================================================
+     Section 6.3 : Contrôles et contrôles de données
+     Description : Les deux contrôles tabulaires de la section :
+                  · DataGrid ÉDITABLE (AutoGenerateColumns=False, colonnes
+                    typées : Text, CheckBox, Template avec un Button) ;
+                  · ListView + GridView pour l'AFFICHAGE en colonnes
+                    (DisplayMemberBinding, StringFormat=C).
+                  Les deux s'alimentent par ItemsSource lié à une
+                  ObservableCollection (synchronisation automatique).
+     Fichier source : 03-controles.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="6.3 — Contrôles de données" Height="420" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <DockPanel Margin="8">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
+            <Button Content="Ajouter un client" Click="Ajouter_Click" Width="140" Margin="0,0,8,0" />
+            <Button Content="Supprimer la sélection" Click="Supprimer_Click" Width="160" />
+        </StackPanel>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- DataGrid éditable -->
+            <DataGrid x:Name="grilleClients" Grid.Row="0" Margin="0,0,0,4"
+                      AutoGenerateColumns="False" SelectionMode="Single" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*" />
+                    <DataGridTextColumn Header="Ville" Binding="{Binding Ville}" Width="150" />
+                    <DataGridCheckBoxColumn Header="Actif" Binding="{Binding EstActif}" />
+                    <DataGridTemplateColumn Header="Action" Width="90">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Modifier" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- ListView + GridView (affichage) -->
+            <ListView x:Name="listeProduits" Grid.Row="1" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Référence" DisplayMemberBinding="{Binding Reference}" Width="120" />
+                        <GridViewColumn Header="Désignation" DisplayMemberBinding="{Binding Designation}" Width="240" />
+                        <GridViewColumn Header="Prix" DisplayMemberBinding="{Binding Prix, StringFormat=C}" Width="100" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</Window>

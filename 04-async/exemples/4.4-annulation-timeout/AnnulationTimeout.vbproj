@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 4.4 : Annulation et timeout (CancellationToken)
+  Description : Projet console VB.NET (.NET 10) — annulation coopérative,
+                points de contrôle, états Canceled/Faulted, timeouts,
+                sources liées et Task.WaitAsync.
+  Fichier source : 04-annulation-timeout.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AnnulationTimeout</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 5.9 : Applications MDI et multi-formulaires
+  Description : Projet Windows Forms VB.NET (.NET 10) a cadre applicatif
+                (MyType=WindowsForms), structure comme le cree Visual Studio.
+  Fichier source : 09-mdi.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>MdiDemo</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>MdiDemo.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

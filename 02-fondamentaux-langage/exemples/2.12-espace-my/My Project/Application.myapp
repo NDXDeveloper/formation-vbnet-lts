@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================================================
+  Section 2.12 : L'espace My — un raccourci propre à VB.NET
+  Description : Réglages du cadre applicatif (fichier lu par le Concepteur
+                de Visual Studio ; le code correspondant est dans
+                Application.Designer.vb).
+  Fichier source : 12-espace-my.md
+========================================================================== -->
+<MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MySubMain>true</MySubMain>
+  <MainForm>Form1</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>0</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <AuthenticationMode>0</AuthenticationMode>
+  <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+  <HighDpiMode>1</HighDpiMode>
+</MyApplicationData>

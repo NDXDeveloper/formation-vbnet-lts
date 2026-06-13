@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 4.2 : Async/Await (Task, Task(Of T))
+  Description : Projet console VB.NET (.NET 10) — anatomie d'une méthode
+                asynchrone, composition (WhenAll/WhenAny), Task.Run,
+                pont Sub Main -> MainAsync (pas d'Async Main en VB).
+  Fichier source : 02-async-await.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AsyncAwait</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

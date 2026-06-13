@@ -1,0 +1,29 @@
+<!-- ============================================================================
+     Section 6.6 : Architecture MVVM
+     Description : La vue ne connaît que le view-model (via DataContext) :
+                  le TextBox est lié à Nom, le Button à EnregistrerCommand
+                  (il se DÉSACTIVE de lui-même tant que Nom est vide, grâce à
+                  CanExecute). Aucun gestionnaire d'événement dans le
+                  code-behind : la commande remplace le Button_Click.
+     Fichier source : 06-mvvm.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="6.6 — MVVM" Height="240" Width="420"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <StackPanel Margin="16">
+        <TextBlock Text="Nom du client :" />
+        <TextBox Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,12" />
+
+        <!-- La commande se désactive automatiquement si CanExecute = False -->
+        <Button Content="Enregistrer" Command="{Binding EnregistrerCommand}"
+                Width="120" HorizontalAlignment="Left" />
+
+        <TextBlock Margin="0,12,0,0"
+                   Text="{Binding DernierEnregistre, StringFormat='Dernier enregistré : {0}'}" />
+        <TextBlock Foreground="Gray" TextWrapping="Wrap" Margin="0,8,0,0"
+                   Text="Le bouton est grisé tant que le champ est vide (CanExecute)." />
+    </StackPanel>
+</Window>

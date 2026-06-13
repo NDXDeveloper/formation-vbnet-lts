@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 2.7 : Dates, nombres, formatage et culture
+  Description : Projet console VB.NET (.NET 10) — type Date, DateOnly/TimeOnly,
+                analyse et formatage AVEC CULTURE EXPLICITE (fr-FR, en-US,
+                invariante) pour des sorties reproductibles sur toute machine.
+  Fichier source : 07-dates-nombres-culture.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DatesNombresCulture</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+<!-- =========================================================================
+  Section 4.8 : Services en arrière-plan : Generic Host et BackgroundService
+  Description : Projet CONSOLE VB.NET (.NET 10) — il n'existe pas de modèle
+                « Worker » en VB : on câble le Generic Host À LA MAIN dans une
+                console. Dépendances NuGet Microsoft.Extensions.* (Hosting,
+                DI, Logging) consommées sans réserve depuis VB.
+  Fichier source : 08-background-services.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BackgroundServices</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

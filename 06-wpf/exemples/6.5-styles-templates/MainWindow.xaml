@@ -1,0 +1,111 @@
+<!-- ============================================================================
+     Section 6.5 : Styles, ressources, templates et triggers
+     Description : Le système d'apparence de la section, en quatre briques :
+                  · RESSOURCES (SolidColorBrush, Double) référencées par
+                    {StaticResource} ;
+                  · STYLES : nommé (x:Key), implicite (par TargetType, sans
+                    clé), et héritage BasedOn ;
+                  · TRIGGERS : Trigger IsMouseOver/IsEnabled et DataTrigger
+                    (EstActif=False -> texte gris) ;
+                  · TEMPLATES : ControlTemplate (TemplateBinding +
+                    ContentPresenter) et DataTemplate (rendu d'un Client).
+     Fichier source : 05-styles-templates.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+        xmlns:local="clr-namespace:StylesTemplates"
+        Title="6.5 — Styles et templates" Height="440" Width="520"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <!-- Ressources simples : un pinceau, une épaisseur (Thickness) et un
+             Double (sys:Double). Chacune est appliquée à une propriété du bon
+             type — un Double ne peut pas alimenter une Margin (qui est une
+             Thickness). -->
+        <SolidColorBrush x:Key="CouleurAccent" Color="#0078D4" />
+        <Thickness x:Key="MargeStandard" Left="8" Top="4" Right="8" Bottom="4" />
+        <sys:Double x:Key="OpaciteSurvol">0.85</sys:Double>
+
+        <!-- Style nommé (explicite) -->
+        <Style x:Key="BoutonPrincipal" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource CouleurAccent}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Padding" Value="12,6" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="{StaticResource MargeStandard}" />
+            <!-- Trigger : changement conditionnel, réversible -->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="{StaticResource OpaciteSurvol}" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.5" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style implicite : tous les TextBlock de la portée -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Margin" Value="0,2" />
+        </Style>
+
+        <!-- Bouton entièrement re-templaté (lookless) -->
+        <Style x:Key="BoutonArrondi" TargetType="Button">
+            <Setter Property="Background" Value="SteelBlue" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Padding" Value="12,6" />
+            <Setter Property="Margin" Value="8,4" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="fond"
+                                Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="fond" Property="Opacity" Value="0.85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- DataTemplate : apparence d'un Client, avec DataTrigger -->
+        <DataTemplate x:Key="ModeleClient" DataType="{x:Type local:Client}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Nom}" FontWeight="Bold">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding EstActif}" Value="False">
+                                    <Setter Property="Foreground" Value="Gray" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+                <TextBlock Text="{Binding Ville}" Margin="8,0,0,0" Foreground="Gray" />
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <StackPanel Margin="12">
+        <TextBlock Text="Styles et templates" FontWeight="Bold" FontSize="15" />
+
+        <Button Content="Bouton principal (style nommé)" Style="{StaticResource BoutonPrincipal}" />
+        <Button Content="Bouton arrondi (ControlTemplate)" Style="{StaticResource BoutonArrondi}" />
+        <Button Content="Bouton désactivé" Style="{StaticResource BoutonPrincipal}" IsEnabled="False" />
+
+        <TextBlock Text="Clients (DataTemplate + DataTrigger sur EstActif) :" Margin="0,10,0,2" />
+        <ListBox x:Name="listeClients" Height="140"
+                 ItemTemplate="{StaticResource ModeleClient}" />
+    </StackPanel>
+</Window>

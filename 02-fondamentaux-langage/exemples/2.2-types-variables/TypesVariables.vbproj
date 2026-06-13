@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 2.2 : Types de données et variables
+  Description : Projet console VB.NET (.NET 10) — types valeur vs référence,
+                Nothing contextuel, littéraux, Static, nullables de valeur,
+                inférence, constantes et énumérations.
+  Fichier source : 02-types-variables.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TypesVariables</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

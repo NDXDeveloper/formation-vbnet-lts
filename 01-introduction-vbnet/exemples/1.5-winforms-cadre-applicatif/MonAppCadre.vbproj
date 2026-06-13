@@ -1,0 +1,33 @@
+<!-- =========================================================================
+  Section 1.5 : Premier projet pas à pas (Console et Windows Forms)
+  Description : Projet Windows Forms VB structuré comme le crée Visual
+                Studio 2026 : démarrage par le « cadre applicatif »
+                (Application Framework) — pas de Sub Main écrit à la main.
+                Points clés :
+                  · <MyType>WindowsForms</MyType> active l'espace My et le
+                    cadre applicatif (le compilateur génère le point
+                    d'entrée dans My.MyApplication) ;
+                  · <StartupObject> désigne My.MyApplication ;
+                  · le formulaire de démarrage est choisi dans
+                    My Project/Application.Designer.vb (OnCreateMainForm) ;
+                  · ApplicationEvents.vb accueille les événements globaux.
+  Fichier source : 05-premier-projet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MonAppCadre</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <StartupObject>MonAppCadre.My.MyApplication</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

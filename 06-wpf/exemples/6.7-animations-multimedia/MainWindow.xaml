@@ -1,0 +1,43 @@
+<!-- ============================================================================
+     Section 6.7 : Animations et multimédia (notions)
+     Description : Le modèle d'animation de la section :
+                  · un fondu d'apparition DÉCLARATIF (EventTrigger sur Loaded
+                    -> BeginStoryboard -> DoubleAnimation sur Opacity) avec
+                    fonction d'accélération (QuadraticEase EaseOut) ;
+                  · un bouton qui lance une animation EN CODE (BeginAnimation).
+                  On anime Opacity / RenderTransform (composés GPU), jamais
+                  Width/Height/Margin (qui relancent la disposition).
+     Fichier source : 07-animations-multimedia.md
+============================================================================ -->
+<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="6.7 — Animations" Height="280" Width="440"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <StackPanel Margin="16">
+
+        <!-- Fondu d'apparition au chargement, entièrement déclaratif -->
+        <Border Background="#0078D4" CornerRadius="8" Padding="16" Opacity="0">
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Border.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="0" To="1" Duration="0:0:0.6">
+                                <DoubleAnimation.EasingFunction>
+                                    <QuadraticEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Border.Triggers>
+            <TextBlock Text="Ce panneau apparaît en fondu (DoubleAnimation + easing)."
+                       Foreground="White" TextWrapping="Wrap" />
+        </Border>
+
+        <Button x:Name="btnAnimer" Content="Faire clignoter (BeginAnimation en code)"
+                Margin="0,16,0,0" Height="32" Click="btnAnimer_Click" />
+    </StackPanel>
+</Window>

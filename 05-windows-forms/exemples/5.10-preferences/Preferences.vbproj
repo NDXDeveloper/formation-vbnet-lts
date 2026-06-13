@@ -1,0 +1,28 @@
+<!-- =========================================================================
+  Section 5.10 : Preferences et parametres utilisateur (My.Settings)
+  Description : Projet Windows Forms VB.NET (.NET 10) a cadre applicatif.
+  Fichier source : 10-preferences.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Preferences</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>Preferences.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <!-- En Windows Forms sur .NET 10, System.Configuration.ConfigurationManager
+       est fourni par le runtime Windows Desktop : aucune référence NuGet
+       n'est nécessaire pour My.Settings (contrairement à un projet console
+       ou bibliothèque, cf. section 2.12). -->
+
+</Project>

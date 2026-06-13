@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 3.4 : Interfaces
+  Description : Projet console VB.NET (.NET 10) — déclaration et
+                implémentation d'interfaces (clause Implements par membre),
+                interfaces multiples, héritées et génériques.
+  Fichier source : 04-interfaces.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Interfaces</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

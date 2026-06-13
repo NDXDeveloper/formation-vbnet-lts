@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 1.6.2 : La stratégie hybride VB.NET / C# en une page
+  Description : La « bibliothèque moderne » du schéma de la section :
+                bibliothèque de classes C# (net10.0) contenant les
+                fonctionnalités hors périmètre VB, référencée et consommée
+                par le projet VB.NET AppVB de la même solution. 🔗
+  Fichier source : 06.2-strategie-hybride.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>ModerneLib</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

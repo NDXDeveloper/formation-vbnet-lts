@@ -1,0 +1,17 @@
+<!-- =========================================================================
+  Section 1.2 : De Visual Basic 6 à VB.NET (histoire et héritage legacy)
+  Description : Projet console VB.NET illustrant les ruptures VB6 → VB.NET
+                décrites dans la section (exemple ajouté à la formation).
+  Fichier source : 02-histoire-evolution.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RuptureVb6VbNet</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 1.3 : L'écosystème .NET — Structure d'une solution (solution mixte)
+  Description : Bibliothèque de classes VB.NET (logique métier) de la
+                solution « MaSolution ». Référence la brique C# MonApp.Core
+                par une ProjectReference — l'interopérabilité VB ↔ C# 🔗.
+  Fichier source : 03-ecosysteme-dotnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>MonApp.Metier</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MonApp.Core\MonApp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

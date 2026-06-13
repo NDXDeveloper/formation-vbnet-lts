@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 2.6 : Chaînes et manipulation de texte
+  Description : Projet console VB.NET (.NET 10) — immuabilité de String,
+                littéraux sans antislash, méthodes .NET vs fonctions héritées,
+                StringBuilder et interpolation $"...".
+  Fichier source : 06-chaines.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Chaines</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

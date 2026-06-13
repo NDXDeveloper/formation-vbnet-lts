@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================================================
+  Section 1.5 : Premier projet pas à pas (Console et Windows Forms)
+  Description : Réglages du cadre applicatif tels que les enregistre
+                Visual Studio (Propriétés du projet → Application).
+                Ce fichier sert au Concepteur ; le code correspondant est
+                dans Application.Designer.vb.
+  Fichier source : 05-premier-projet.md
+========================================================================== -->
+<MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MySubMain>true</MySubMain>
+  <MainForm>Form1</MainForm>
+  <SingleInstance>false</SingleInstance>
+  <ShutdownMode>0</ShutdownMode>
+  <EnableVisualStyles>true</EnableVisualStyles>
+  <AuthenticationMode>0</AuthenticationMode>
+  <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+  <HighDpiMode>1</HighDpiMode>
+</MyApplicationData>

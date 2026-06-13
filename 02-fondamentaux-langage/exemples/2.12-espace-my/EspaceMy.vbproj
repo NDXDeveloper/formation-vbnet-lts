@@ -1,0 +1,36 @@
+<!-- =========================================================================
+  Section 2.12 : L'espace My — un raccourci propre à VB.NET
+  Description : Projet Windows Forms (.NET 10) — LE scénario où My est
+                pleinement pris en charge sur .NET moderne (le cours vérifie
+                qu'en console, My.Application / My.Computer / My.User
+                n'existent pas : erreur BC30456). Cadre applicatif activé
+                (MyType=WindowsForms), paramètres (My.Settings) et ressources
+                (My.Resources) câblés comme le fait Visual Studio.
+  Fichier source : 12-espace-my.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EspaceMy</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <StartupObject>EspaceMy.My.MyApplication</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Nom logique explicite : celui que lit le ResourceManager de
+         My Project\Resources.Designer.vb (EspaceMy.Resources). -->
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <LogicalName>EspaceMy.Resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

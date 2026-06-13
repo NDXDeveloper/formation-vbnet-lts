@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 1.1 : Qu'est-ce que VB.NET et à quoi il sert réellement en 2026
+  Description : Projet console VB.NET ciblant .NET 10 LTS — fichier projet
+                au format SDK-style, avec Option Strict activé (bonne
+                pratique recommandée dès la section 1.4).
+  Fichier source : 01-quest-ce-que-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BonjourVilles</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

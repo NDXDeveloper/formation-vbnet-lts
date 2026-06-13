@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 4.6 : Consommer IAsyncEnumerable / flux asynchrones ; ValueTask
+  Description : Projet console VB.NET — CONSOMME les flux asynchrones produits
+                par la bibliothèque C# FluxCsharp, et implémente IAsyncDisposable
+                (ValueTask renvoyé à la main, car pas de Async...As ValueTask en VB).
+  Fichier source : 06-async-streams.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AppVB</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FluxCsharp\FluxCsharp.csproj" />
+  </ItemGroup>
+
+</Project>

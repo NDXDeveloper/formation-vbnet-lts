@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 3.6 : Événements et délégués — un point fort idiomatique de VB.NET
+  Description : Projet console VB.NET (.NET 10) — délégués (AddressOf),
+                lambdas, Event/RaiseEvent, WithEvents + Handles,
+                AddHandler/RemoveHandler, Custom Event et pattern Observer.
+  Fichier source : 06-evenements-delegues.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EvenementsDelegues</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

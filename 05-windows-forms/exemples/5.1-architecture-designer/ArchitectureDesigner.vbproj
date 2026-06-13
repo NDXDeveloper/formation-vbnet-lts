@@ -1,0 +1,26 @@
+<!-- =========================================================================
+  Section 5.1 : Introduction, architecture et le Concepteur (Designer)
+  Description : Projet Windows Forms VB.NET (.NET 10) structuré comme le crée
+                Visual Studio : cadre applicatif (MyType=WindowsForms), classes
+                partielles Form1.vb / Form1.Designer.vb reliées par
+                InitializeComponent et WithEvents/Handles.
+  Fichier source : 01-introduction-designer.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>MonApplication</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>MonApplication.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

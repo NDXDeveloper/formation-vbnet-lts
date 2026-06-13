@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 3.7 : Types immuables et records
+  Description : Projet console VB.NET de la solution hybride : l'immuabilité
+                « maison » en VB pur (Argent, Commande) et la consommation
+                des records C# de ModeleCsharp (ProjectReference). 🔗
+  Fichier source : 07-immuabilite-records.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AppVB</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModeleCsharp\ModeleCsharp.csproj" />
+  </ItemGroup>
+
+</Project>

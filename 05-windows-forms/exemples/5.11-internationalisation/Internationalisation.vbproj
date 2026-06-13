@@ -1,0 +1,23 @@
+<!-- =========================================================================
+  Section 5.11 : Internationalisation (i18n/l10n, ressources .resx)
+  Description : Projet Windows Forms VB.NET (.NET 10) a cadre applicatif.
+  Fichier source : 11-internationalisation.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Internationalisation</RootNamespace>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>Internationalisation.My.MyApplication</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

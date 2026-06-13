@@ -1,0 +1,18 @@
+<!-- =========================================================================
+  Section 3.8 : Réflexion et attributs
+  Description : Projet console VB.NET (.NET 10) — System.Reflection (Type,
+                PropertyInfo, MethodInfo, Activator, assemblies) et attributs
+                (intégrés, DataAnnotations, personnalisés relus par réflexion).
+  Fichier source : 08-reflexion-attributs.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ReflexionAttributs</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>
