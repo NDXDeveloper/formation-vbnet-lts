@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 11.7 : Gestion des risques — filet de non-régression (xUnit, VB)
+  Description : Projet de tests verrouillant le comportement ACTUEL du code
+                hérité : tests de CARACTÉRISATION (paramétrés) et test GOLDEN
+                MASTER (approbation) comparant les sorties sur un éventail
+                d'entrées à une référence capturée. Ce filet sécurise toute
+                migration/modernisation ultérieure.
+  Fichier source : 07-gestion-risques.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Heritage.Tests</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Heritage\Heritage.vbproj" />
+  </ItemGroup>
+
+</Project>

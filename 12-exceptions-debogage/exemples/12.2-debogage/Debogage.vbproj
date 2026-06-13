@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 12.2 : Débogage — instrumentation légère
+  Description : Console VB.NET (.NET 10). Le gros de la 12.2 relève de l'IDE
+                (points d'arrêt, espions, Hot Reload — non scriptables). Cet
+                exemple isole la part CODE et vérifiable : l'attribut
+                <DebuggerDisplay> (avec le motif « propriété privée + ,nq »),
+                l'instrumentation System.Diagnostics (Debug.WriteLine /
+                Debug.Assert, retirées en Release) et la compilation
+                conditionnelle #If DEBUG. À exécuter en configuration DEBUG.
+  Fichier source : 02-debogage.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Debogage</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

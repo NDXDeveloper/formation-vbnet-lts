@@ -1,0 +1,33 @@
+// ============================================================================
+//  Section 8.5 : gRPC et GraphQL — contrat .proto (côté serveur, transcodé)
+//  Description : Même service/messages que côté client, mais annoté pour le
+//                JSON TRANSCODING : l'option google.api.http mappe la méthode
+//                gRPC ObtenirProduit sur une route REST GET /v1/produits/{id}.
+//                Le serveur expose alors le MÊME service en gRPC (HTTP/2) ET en
+//                REST/JSON — ce dernier consommable depuis VB comme en § 8.1.
+//  Fichier source : 05-grpc-graphql.md
+// ============================================================================
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+
+option csharp_namespace = "Catalogue.Grpc";
+package catalogue;
+
+service CatalogueService {
+  rpc ObtenirProduit (ProduitRequete) returns (ProduitReponse) {
+    option (google.api.http) = {
+      get: "/v1/produits/{id}"
+    };
+  }
+}
+
+message ProduitRequete {
+  int32 id = 1;
+}
+
+message ProduitReponse {
+  int32 id = 1;
+  string nom = 2;
+  double prix = 3;
+}

@@ -1,0 +1,28 @@
+<!-- =========================================================================
+  Section 7.4 : Autres stockages (notions)
+  Description : Console VB.NET (.NET 10). NoSQL (MongoDB, Cosmos DB) et Redis
+                exigent des SERVEURS externes : ils ne peuvent pas être
+                exécutés ici. Cet exemple illustre donc les CONCEPTS de façon
+                exécutable et sans serveur :
+                  · le motif « document » via System.Text.Json (intégré) ;
+                  · le motif « cache-aside » via IMemoryCache
+                    (Microsoft.Extensions.Caching.Memory — en mémoire, sans
+                    serveur), qui partage l'API IDistributedCache façon Redis.
+                Les vraies API MongoDB/Cosmos/Redis sont documentées.
+  Fichier source : 04-autres-stockages.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AutresStockages</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,38 @@
+<!-- =========================================================================
+  Section 9.4 : WebView2 (intégrer du web moderne dans une appli de bureau)
+  Description : Application Windows Forms VB.NET (.NET 10) hébergeant un contrôle
+                WebView2 (moteur Chromium d'Edge). Démontre l'initialisation
+                asynchrone obligatoire (EnsureCoreWebView2Async), le chargement
+                de contenu local par nom d'hôte virtuel, et les TROIS voies
+                d'interop .NET <-> JavaScript : ExecuteScriptAsync, messagerie
+                (postMessage / WebMessageReceived) et objets hôtes
+                (AddHostObjectToScript, qui exige <ComVisible(True)>).
+                Auto-test : DEMO_AUTOCLOSE=1 pilote la séquence et journalise
+                dans %TEMP%\webview2-autotest.log, puis ferme la fenêtre.
+  Fichier source : 04-webview2.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WebView2Demo</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <!-- Le paquet WebView2 embarque aussi son contrôle WPF (inutilisé ici) qui
+         référence une autre version de WindowsBase : on rétrograde le MSB3277
+         de version unifiée (inoffensif dans une appli WinForms) en message. -->
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Ressources web servies localement (copiées à côté de l'exécutable). -->
+    <Content Include="WebAssets\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

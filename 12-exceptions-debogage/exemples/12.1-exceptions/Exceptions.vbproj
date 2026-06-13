@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 12.1 : Try/Catch/Finally, filtres When, hiérarchie, exceptions perso
+  Description : Console VB.NET (.NET 10) démontrant la gestion structurée des
+                exceptions : propriétés de Exception, gardes ThrowIf, filtres
+                When (dont When→False pour journaliser sans capturer), Throw vs
+                Throw ex (préservation de la pile), enveloppement par
+                InnerException, ExceptionDispatchInfo, exceptions personnalisées
+                (patron à 3 constructeurs + donnée métier) et dictionnaire Data.
+  Fichier source : 01-exceptions.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExceptionsDemo</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

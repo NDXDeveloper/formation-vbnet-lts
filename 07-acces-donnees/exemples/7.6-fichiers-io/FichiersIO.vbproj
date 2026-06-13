@@ -1,0 +1,19 @@
+<!-- =========================================================================
+  Section 7.6 : Fichiers, flux (Stream) et E/S
+  Description : Console VB.NET (.NET 10). Tout est intégré au runtime
+                (System.IO, System.IO.Compression, System.Security.Cryptography) :
+                aucun paquet NuGet. Tous les fichiers sont créés dans un
+                dossier temporaire, puis supprimés.
+  Fichier source : 06-fichiers-io.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FichiersIO</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

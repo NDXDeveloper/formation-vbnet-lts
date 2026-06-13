@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 11.5 : Coexistence — hôte moderne (.NET 10)
+  Description : Application console .NET 10 (cible -windows pour consommer la
+                bibliothèque multi-ciblée côté moderne). Elle référence la
+                bibliothèque partagée .NET Standard 2.0 ET la bibliothèque
+                multi-ciblée : MSBuild sélectionne automatiquement l'asset
+                compatible (netstandard2.0 et net10.0-windows respectivement).
+  Fichier source : 05-coexistence.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Hote.Moderne</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Societe.Metier\Societe.Metier.vbproj" />
+    <ProjectReference Include="..\Societe.Multicible\Societe.Multicible.vbproj" />
+  </ItemGroup>
+
+</Project>

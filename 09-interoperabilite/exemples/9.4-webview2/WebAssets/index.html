@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- ============================================================================
+     Section 9.4 : WebView2 — page locale de démonstration
+     Description : Page servie via le mappage de nom d'hôte virtuel
+                   (https://appassets/index.html). Au chargement, elle appelle
+                   l'OBJET HÔTE .NET (pont.Additionner, asynchrone car il
+                   traverse la frontière), affiche le résultat, puis renvoie un
+                   message JSON à l'hôte VB.NET (postMessage).
+     Fichier source : 04-webview2.md
+     ============================================================================ -->
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo WebView2 VB.NET</title>
+</head>
+<body>
+  <h1 id="resultat">Initialisation…</h1>
+  <script>
+    async function demarrer() {
+      let somme = -1;
+      try {
+        // Objet hôte : appeler du .NET depuis JavaScript (proxy asynchrone).
+        somme = await window.chrome.webview.hostObjects.pont.Additionner(2, 3);
+      } catch (e) {
+        somme = 'err:' + e;
+      }
+      document.getElementById('resultat').textContent = 'pont.Additionner(2,3) = ' + somme;
+
+      // JS -> .NET : envoyer un message à l'hôte.
+      window.chrome.webview.postMessage(JSON.stringify({
+        titre: document.title,
+        somme: somme
+      }));
+    }
+    window.addEventListener('load', demarrer);
+  </script>
+</body>
+</html>

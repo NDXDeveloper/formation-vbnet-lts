@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 8.5 : gRPC et GraphQL — bibliothèque CLIENT gRPC (C#)
+  Description : Le cœur de la stratégie hybride. La génération depuis .proto
+                (Grpc.Tools) ne fonctionne QUE dans un projet C# (.csproj) —
+                vérifié : un .vbproj échoue avec « proto compilation is only
+                supported by default in a C# project ». On isole donc le .proto
+                et le code généré ici (GrpcServices="Client"), puis le projet VB
+                référence cette bibliothèque et consomme des types .NET ordinaires.
+  Fichier source : 05-grpc-graphql.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.Client" Version="2.*" />
+    <PackageReference Include="Google.Protobuf" Version="3.*" />
+    <PackageReference Include="Grpc.Tools" Version="2.*" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Génère uniquement le client gRPC (C#) à partir du .proto -->
+    <Protobuf Include="Protos\catalogue.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

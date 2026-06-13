@@ -1,0 +1,31 @@
+<!-- =========================================================================
+  Section 10.5 : Atelier — l'UI en VB.NET Windows Forms (Importateur.UI)
+  Description : Application Windows Forms VB qui ne connaît QUE le métier VB
+                (elle ignore tout du cœur C#). Charge un CSV de façon ASYNCHRONE
+                (interface réactive), affiche les transactions par liaison de
+                données et les totaux par catégorie. Surcharge le TFM en
+                net10.0-windows. Harness DEMO_AUTOCLOSE pour un test non
+                interactif (charge le CSV livré, journalise, ferme).
+  Fichier source : 05-atelier-core-csharp-ui-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Importateur.UI</RootNamespace>
+    <AssemblyName>Importateur.UI</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- L'UI ne référence QUE le métier ; le cœur C# remonte de façon transitive. -->
+    <ProjectReference Include="..\Importateur.Metier\Importateur.Metier.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Jeu de données d'exemple, copié à côté de l'exécutable (test/démonstration). -->
+    <Content Include="exemple-transactions.csv" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

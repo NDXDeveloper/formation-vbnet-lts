@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 10.5 / 10.4 : Atelier — le métier en VB.NET (Importateur.Metier)
+  Description : Bibliothèque VB qui CONSOMME le cœur C# (sous Option Strict On),
+                applique les règles de gestion et agrège en LINQ. Dépend du
+                cœur par référence de PROJET (la frontière hybride passe entre
+                projets, jamais à l'intérieur). RootNamespace vide : les types
+                vivent dans le namespace déclaré « Importateur.Metier ».
+  Fichier source : 05-atelier-core-csharp-ui-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>Importateur.Metier</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Importateur.Coeur\Importateur.Coeur.csproj" />
+  </ItemGroup>
+
+</Project>

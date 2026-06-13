@@ -1,0 +1,20 @@
+<!-- =========================================================================
+  Section 11.7 : Gestion des risques — code « hérité » à verrouiller
+  Description : Bibliothèque VB.NET représentant du code LEGACY au comportement
+                surprenant mais ASSUMÉ (bugs compris). Avant toute migration, on
+                capture ce comportement par des tests de caractérisation et un
+                golden master (projet de tests voisin) : le but n'est pas de
+                corriger, mais de détecter le moindre écart introduit par la
+                migration.
+  Fichier source : 07-gestion-risques.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Heritage</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

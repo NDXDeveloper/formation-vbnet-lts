@@ -1,0 +1,28 @@
+<!-- =========================================================================
+  Section 10.6 : Gérer une solution mixte — tests du métier (VB)
+  Description : Projet de tests xUnit en VB. Teste le métier EN ISOLANT le cœur
+                C# : on dépend de l'interface IAnalyseurCsv et on la SIMULE avec
+                Moq — la frontière hybride facilite le mocking. Paquets sans
+                version (Central Package Management).
+  Fichier source : 06-solution-mixte.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace></RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Moq" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Importateur.Metier\Importateur.Metier.vbproj" />
+    <ProjectReference Include="..\..\src\Importateur.Coeur\Importateur.Coeur.csproj" />
+  </ItemGroup>
+
+</Project>

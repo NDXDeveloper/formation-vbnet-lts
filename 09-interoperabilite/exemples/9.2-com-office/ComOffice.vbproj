@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 9.2 : COM et automation Office
+  Description : Console VB.NET (.NET 10, Windows). Démontre la LIAISON TARDIVE
+                COM (CreateObject, Option Strict Off ciblé par fichier, RCW,
+                Marshal.ReleaseComObject, règle des « deux points ») sur un
+                composant COM TOUJOURS présent sous Windows
+                (Scripting.FileSystemObject) — Office n'étant pas requis. Le
+                code d'automation Office (Excel, liaison tardive) est inclus,
+                mais gardé par une détection à l'exécution : il ne s'exécute
+                que si Office est installé.
+  Fichier source : 02-com-office.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ComOffice</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <!-- Option Strict On par défaut ; la liaison tardive est isolée dans des
+         fichiers commençant par « Option Strict Off ». -->
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

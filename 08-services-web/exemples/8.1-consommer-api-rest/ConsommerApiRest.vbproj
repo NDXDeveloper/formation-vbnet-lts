@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 8.1 : Consommer des API REST
+  Description : Console VB.NET (.NET 10). Pour être exécutable hors ligne, un
+                petit serveur LOCAL (System.Net.HttpListener, intégré) sert du
+                JSON ; le client typé le consomme via IHttpClientFactory +
+                client typé + résilience Polly — exactement comme on
+                consommerait une vraie API REST.
+  Fichier source : 01-consommer-api-rest.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsommerApiRest</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

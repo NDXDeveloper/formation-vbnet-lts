@@ -1,0 +1,20 @@
+<!-- =========================================================================
+  Section 9.3 : Interopérabilité entre langages .NET (VB <- C#)
+  Description : Bibliothèque C# « VB-friendly » et CLS-conforme, exposant les
+                constructions que VB consomme à travers la frontière : record
+                positionnel, paramètre out, record init-only, tuple nommé,
+                méthode d'extension, async/Task, IAsyncEnumerable, et un membre
+                dont le nom est un mot-clé VB (Stop). Compile vers le même IL /
+                CTS : VB la référence et l'utilise sans friction.
+  Fichier source : 03-interop-langages.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>BibliothequeCs</RootNamespace>
+  </PropertyGroup>
+
+</Project>

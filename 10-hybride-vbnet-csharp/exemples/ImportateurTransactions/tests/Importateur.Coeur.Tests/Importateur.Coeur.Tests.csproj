@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 10.6 : Gérer une solution mixte — tests du cœur (C#)
+  Description : Projet de tests xUnit pour le cœur C#, testé « à part » sur ses
+                propres entrées (parsing CSV). Les paquets sont référencés SANS
+                version (Central Package Management, cf. Directory.Packages.props).
+  Fichier source : 06-solution-mixte.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Importateur.Coeur.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Importateur.Coeur\Importateur.Coeur.csproj" />
+  </ItemGroup>
+
+</Project>

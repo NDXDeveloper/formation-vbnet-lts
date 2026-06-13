@@ -1,0 +1,23 @@
+<!-- =========================================================================
+  Section 9.2 : COM et automation Office — exposer du .NET à COM (CCW)
+  Description : Bibliothèque VB.NET (.NET 10, Windows) rendue utilisable par un
+                CLIENT COM (macro VBA, VB6, natif) via un COM Callable Wrapper.
+                Le motif recommandé : interface explicite décorée <InterfaceType>
+                + <ClassInterface(None)> sur la classe + un <Guid> fixe par type.
+                <EnableComHosting>true</EnableComHosting> produit un fichier
+                *.comhost.dll (activation COM), en remplacement de regasm
+                (.NET Framework). Enregistrement client : regsvr32 du comhost.dll.
+  Fichier source : 02-com-office.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>Calculatrice</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <!-- Produit Calculatrice.comhost.dll pour l'activation COM du composant. -->
+    <EnableComHosting>true</EnableComHosting>
+  </PropertyGroup>
+
+</Project>

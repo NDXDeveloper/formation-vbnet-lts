@@ -1,0 +1,26 @@
+<!-- =========================================================================
+  Section 11.5 : Coexistence — bibliothèque MULTI-CIBLÉE
+  Description : Un seul code source produisant DEUX assemblys — net48 (.NET
+                Framework) et net10.0-windows (.NET moderne) — pour les cas où
+                la bibliothèque a besoin de chemins de code propres à chaque
+                plateforme (au-delà du sous-ensemble .NET Standard). Les portions
+                divergentes sont isolées par compilation conditionnelle #If.
+                Microsoft.NETFramework.ReferenceAssemblies permet de bâtir net48
+                sans pack de ciblage installé.
+  Fichier source : 05-coexistence.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net10.0-windows</TargetFrameworks>
+    <RootNamespace>Societe.Multicible</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Fournit les assemblys de référence net48 (build cross-plateforme). -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

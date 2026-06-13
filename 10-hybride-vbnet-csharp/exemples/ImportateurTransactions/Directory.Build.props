@@ -1,0 +1,32 @@
+<!-- =========================================================================
+  Section 10.6 : Gérer une solution mixte — propriétés MSBuild partagées
+  Description : Appliqué à TOUS les projets de la solution (VB et C#). Les
+                options propres au langage sont CONDITIONNÉES par l'extension du
+                projet (Nullable/LangVersion/ImplicitUsings pour C# ;
+                OptionStrict/OptionExplicit pour VB), comme le préconise la
+                section. La cible commune est net10.0 (l'UI WinForms la
+                surcharge en net10.0-windows dans son propre projet).
+  Fichier source : 06-solution-mixte.md
+========================================================================== -->
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Company>Societe</Company>
+  </PropertyGroup>
+
+  <!-- Options propres à C# -->
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Options propres à VB -->
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.vbproj'">
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

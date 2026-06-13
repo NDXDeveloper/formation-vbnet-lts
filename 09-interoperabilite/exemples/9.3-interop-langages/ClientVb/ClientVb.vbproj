@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 9.3 : Interopérabilité entre langages .NET (VB <- C#)
+  Description : Console VB.NET qui consomme la bibliothèque C# voisine via une
+                simple référence de projet (même solution, même runtime). VB ne
+                « voit » que des types .NET : record, out/ByRef, init-only par
+                With { }, tuple nommé, méthode d'extension, async, IAsyncEnumerable
+                (énumérateur manuel), et mot-clé échappé [Stop].
+  Fichier source : 03-interop-langages.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ClientVb</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BibliothequeCs\BibliothequeCs.csproj" />
+  </ItemGroup>
+
+</Project>

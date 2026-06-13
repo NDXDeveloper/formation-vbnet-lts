@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 9.1 : P/Invoke (appel d'API natives Windows)
+  Description : Console VB.NET (.NET 10) qui appelle l'API Win32 (user32,
+                kernel32) par les DEUX syntaxes VB — <DllImport> et Declare —
+                en illustrant marshaling de structures (StructLayout/MarshalAs),
+                callback (EnumWindows + délégué), gestion d'erreur native
+                (SetLastError + GetLastPInvokeError + Win32Exception) et la
+                comparaison à une API managée (PID). Aucun paquet : P/Invoke est
+                intégré au runtime. Windows uniquement.
+  Fichier source : 01-pinvoke.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PInvoke</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

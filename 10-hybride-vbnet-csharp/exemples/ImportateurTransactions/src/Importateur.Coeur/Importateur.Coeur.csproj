@@ -1,0 +1,17 @@
+<!-- =========================================================================
+  Section 10.5 / 10.3 : Atelier — le cœur en C# (Importateur.Coeur)
+  Description : Bibliothèque C# (net10.0) hébergeant les fonctionnalités
+                « avancées » déléguées : parsing CSV Span-first (performance) et
+                modèle immuable à base de records (fonctionnalités). Surface
+                publique VB-friendly et CLS-conforme ; la machinerie Span reste
+                interne. TFM/Nullable/LangVersion viennent de Directory.Build.props.
+  Fichier source : 05-atelier-core-csharp-ui-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Importateur.Coeur</RootNamespace>
+    <AssemblyName>Importateur.Coeur</AssemblyName>
+  </PropertyGroup>
+
+</Project>

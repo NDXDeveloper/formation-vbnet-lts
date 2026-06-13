@@ -1,0 +1,26 @@
+<!-- =========================================================================
+  Section 7.1 : ADO.NET
+  Description : Console VB.NET (.NET 10). Le cours illustre ADO.NET avec
+                Microsoft.Data.SqlClient / LocalDB ; cet exemple emploie
+                Microsoft.Data.Sqlite (aucun serveur requis, exécutable
+                partout) — le cours souligne lui-même que « passer de SQL
+                Server à SQLite revient surtout à changer Sql en Sqlite et la
+                chaîne de connexion ». Les concepts (Using, paramètres,
+                DataReader, DataSet, transaction) sont identiques.
+  Fichier source : 01-adonet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AdoNet</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+<!-- =========================================================================
+  Section 11.5 / 11.4 : Coexistence — bibliothèque partagée .NET Standard 2.0
+  Description : Bibliothèque métier PURE (aucune UI, aucune dépendance de
+                plateforme) ciblant .NET Standard 2.0 : le « pont » consommable
+                À LA FOIS par .NET Framework (≥ 4.6.1) et par .NET 10. C'est le
+                geste central de la migration incrémentale (§11.4 : extraire la
+                logique métier du code-behind) — une seule source de vérité.
+  Fichier source : 05-coexistence.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Societe.Metier</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

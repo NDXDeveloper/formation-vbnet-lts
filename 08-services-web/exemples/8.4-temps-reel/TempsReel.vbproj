@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 8.4 : Communication temps réel
+  Description : Console VB.NET (.NET 10) qui HÉBERGE un serveur ASP.NET Core
+                in-process (SDK Web) exposant les trois canaux temps réel —
+                un hub SignalR TYPÉ (/chat), un endpoint WebSocket brut d'écho
+                (/ws) et un flux Server-Sent Events (/sse) — puis les CONSOMME
+                depuis le même process : client SignalR (HubConnectionBuilder,
+                On, InvokeAsync, Reconnecting), ClientWebSocket, et SseParser
+                via énumérateur asynchrone MANUEL (pas d'Await For Each en VB).
+                Tout in-process, sorties vérifiées.
+  Fichier source : 04-temps-reel.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TempsReel</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Le hub (serveur) est dans le framework partagé ASP.NET Core ; seul le
+         CLIENT SignalR demande un paquet. SseParser (System.Net.ServerSentEvents)
+         est inclus dans le framework sur net10.0 : aucun paquet à ajouter. -->
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

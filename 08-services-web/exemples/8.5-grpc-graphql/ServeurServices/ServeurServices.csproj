@@ -1,0 +1,33 @@
+<!-- =========================================================================
+  Section 8.5 : gRPC et GraphQL — serveur de services (C#)
+  Description : Le serveur que VB consommera. Tout l'outillage « orienté C# »
+                de la section vit ici : un service gRPC (Grpc.AspNetCore) avec
+                JSON TRANSCODING activé (même service exposé aussi en REST/JSON),
+                et un serveur GraphQL HotChocolate (schéma défini par des types
+                et attributs C#). Aucun de ces deux frameworks n'est réaliste en
+                VB → on les délègue à C# (stratégie hybride, module 10).
+  Fichier source : 05-grpc-graphql.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ServeurServices</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="10.0.0" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="16.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Génère le code SERVEUR (C#) ; le .proto porte les annotations HTTP
+         (google.api.http) qui pilotent le JSON transcoding. ProtoRoot="Protos"
+         rend résolvables les imports google/api/*.proto vendus localement. -->
+    <Protobuf Include="Protos\catalogue.proto" GrpcServices="Server" ProtoRoot="Protos" />
+  </ItemGroup>
+
+</Project>

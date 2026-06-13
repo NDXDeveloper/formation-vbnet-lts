@@ -1,0 +1,35 @@
+<!-- =========================================================================
+  Section 11.3 : .NET Framework 4.x → .NET 10 (configuration)
+  Description : Console VB.NET (.NET 10) illustrant le passage de configuration
+                App.config (XML, ConfigurationManager) à appsettings.json
+                (Microsoft.Extensions.Configuration) : configuration EN COUCHES
+                (base + appsettings.Development.json + variables d'environnement),
+                lecture par IConfiguration (indexeur, GetConnectionString) et
+                pattern OPTIONS (IOptions(Of T) lié à une section). Montre aussi
+                le rappel d'encodage du saut Framework→moderne (Encoding.Default
+                = UTF-8). Le fichier App.config d'origine est fourni en regard.
+  Fichier source : 03-framework-vers-net10.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConfigModerne</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

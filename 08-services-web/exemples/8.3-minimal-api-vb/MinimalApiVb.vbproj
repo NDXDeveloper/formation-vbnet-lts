@@ -1,0 +1,23 @@
+<!-- =========================================================================
+  Section 8.3 : Limites du web en VB.NET — Minimal API
+  Description : Démonstration que les Minimal APIs FONCTIONNENT en VB.NET (tout
+                est .NET) — mais « à contre-emploi » : il faut monter le projet
+                à la main (console -> SDK Web), tout vit dans Module/Sub Main,
+                chaque Imports est explicite, et la liaison se fait par
+                RÉFLEXION à l'exécution (le Request Delegate Generator, C#-only,
+                ne s'exécute pas -> pas de Native AOT). La concision, seul vrai
+                argument des Minimal APIs, s'évapore. Le réflexe reste : § 8.2,
+                contrôleurs.
+  Fichier source : 03-limites-web-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MinimalApiVb</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

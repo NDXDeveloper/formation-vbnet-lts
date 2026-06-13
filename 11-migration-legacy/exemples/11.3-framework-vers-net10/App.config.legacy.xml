@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================================
+     Section 11.3 : .NET Framework 4.x → .NET 10 (configuration)
+     Description : Le fichier App.config d'ORIGINE (.NET Framework), fourni À
+                   TITRE DE COMPARAISON (extension .legacy.xml pour qu'il ne soit
+                   pas pris pour la config du projet). Sur .NET moderne, son
+                   contenu migre vers appsettings.json, et ConfigurationManager
+                   cède la place à IConfiguration.
+     Fichier source : 03-framework-vers-net10.md
+     ============================================================================ -->
+<configuration>
+  <appSettings>
+    <add key="ApiBaseUrl" value="https://api.exemple.fr" />
+  </appSettings>
+  <connectionStrings>
+    <add name="Db" connectionString="Server=prod;Database=App" />
+  </connectionStrings>
+</configuration>

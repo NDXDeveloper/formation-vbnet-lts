@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 7.3 : Fournisseurs de bases de données
+  Description : Console VB.NET (.NET 10). Démontre concrètement SQLite — le
+                seul fournisseur SANS serveur, donc exécutable partout : base
+                FICHIER et base EN MÉMOIRE (:memory:). Les chaînes de
+                connexion des autres SGBD (SQL Server, MySQL/MariaDB,
+                PostgreSQL) sont affichées à titre documentaire.
+  Fichier source : 03-fournisseurs.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Fournisseurs</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 12.3 : Journalisation (Microsoft.Extensions.Logging, Serilog)
+  Description : Console VB.NET (.NET 10) : journalisation structurée via
+                Microsoft.Extensions.Logging (abstraction standard) avec
+                LoggerFactory.Create (nommée « fabrique » pour éviter la
+                collision BC30980 avec la classe LoggerFactory), niveaux et
+                filtrage, BeginScope, IsEnabled, LoggerMessage.Define (équivalent
+                VB du générateur [LoggerMessage] réservé à C#), un fournisseur en
+                mémoire prouvant la STRUCTURE des logs, puis Serilog derrière ILogger.
+  Fichier source : 03-journalisation.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Journalisation</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.0" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="9.0.2" />
+  </ItemGroup>
+
+</Project>

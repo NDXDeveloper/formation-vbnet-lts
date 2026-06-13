@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 11.2 : VB6 → VB.NET (faux-amis et constructions obsolètes)
+  Description : Console VB.NET (.NET 10) qui montre les ÉQUIVALENTS CORRECTS en
+                VB.NET des pièges « faux-amis » de la conversion VB6 — tailles
+                des entiers, ByRef/ByVal par défaut, Dim multiple, tableaux base
+                0, Currency→Decimal, Variant→Object, Type→Structure,
+                Collection→List, On Error→Try/Catch, et reconstruction d'un
+                « control array » par AddHandler. Sorties déterministes.
+  Fichier source : 02-vb6-vers-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FauxAmis</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>
