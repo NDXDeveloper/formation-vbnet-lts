@@ -1,0 +1,27 @@
+<!-- =========================================================================
+  Section 16.2 : Cryptographie
+  Description : Console VB.NET (.NET 10) démontrant les primitives éprouvées de
+                System.Security.Cryptography — aléa sûr, hachage d'intégrité
+                (SHA-256), hachage de mot de passe (PBKDF2 salé + comparaison à
+                temps constant), chiffrement authentifié AES-GCM (round-trip +
+                détection d'altération), signature RSA, et DPAPI (ProtectedData)
+                pour les secrets locaux d'une application de bureau. Tout est
+                consommé à l'identique de C#.
+  Fichier source : 02-cryptographie.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cryptographie</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- DPAPI (ProtectedData) — Windows uniquement. -->
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

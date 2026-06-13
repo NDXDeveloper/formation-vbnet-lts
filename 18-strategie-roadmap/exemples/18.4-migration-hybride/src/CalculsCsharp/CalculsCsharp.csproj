@@ -1,0 +1,20 @@
+<!-- =========================================================================
+  Section 18.4 : Migrer vers C# — bibliothèque feuille « migrée » (C#)
+  Description : Projet C# représentant un composant porté en C# au cours d'une
+                migration INCRÉMENTALE (on migre d'abord les bibliothèques feuilles).
+                VB et C# coexistent dans la même solution et compilent vers le même
+                IL : l'interopérabilité est transparente et validée par Microsoft.
+                Cette bibliothèque expose l'équivalent CORRECT du « ^ » de VB
+                (Math.Pow) et illustre ce que « ^ » fait réellement en C# (XOR).
+  Fichier source : 04-migrer-vers-csharp.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>CalculsCsharp</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

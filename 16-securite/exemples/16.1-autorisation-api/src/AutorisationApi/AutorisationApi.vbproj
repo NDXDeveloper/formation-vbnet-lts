@@ -1,0 +1,26 @@
+<!-- =========================================================================
+  Section 16.1 : Authentification et autorisation — Web API
+  Description : Web API VB.NET (.NET 10) protégée par JWT Bearer et des POLITIQUES
+                d'autorisation. Pour être testable HORS LIGNE (sans IdP réel), la
+                signature utilise une clé symétrique HS256 de démonstration ; en
+                production, c'est un IdP (Microsoft Entra ID) qui émet et signe les
+                jetons (clé asymétrique). Le modèle d'autorisation — politique sur
+                le scope « scp » (séparé par des espaces) et politique de rôle — est
+                identique quel que soit l'émetteur.
+  Fichier source : 01-auth.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>AutorisationApi</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

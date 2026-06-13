@@ -1,0 +1,6 @@
+# Section 15.4 : exclure les dossiers de build du contexte Docker (builds plus rapides/sûrs)
+bin/
+obj/
+.git/
+image/
+**/*.user

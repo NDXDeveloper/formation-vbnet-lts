@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 13.1 : Tests unitaires — MSTest + Microsoft.Testing.Platform (MTP)
+  Description : Projet de test MSTest activant la NOUVELLE plateforme de test de
+                .NET 10 (Microsoft.Testing.Platform) : EnableMSTestRunner +
+                OutputType Exe → le projet de test devient un EXÉCUTABLE autonome
+                (point d'entrée Main généré). Lançable par `dotnet test` (support
+                MTP natif au SDK .NET 10) OU directement par `dotnet run`.
+  Fichier source : 01-tests-unitaires.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Calculatrice.Tests.MSTest</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <OutputType>Exe</OutputType>
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="3.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calculatrice\Calculatrice.vbproj" />
+  </ItemGroup>
+
+</Project>

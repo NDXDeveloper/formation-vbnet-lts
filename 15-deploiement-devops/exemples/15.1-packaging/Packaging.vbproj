@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 15.1 : Packaging desktop — modes de publication
+  Description : Application VB.NET (.NET 10) servant à comparer les MODES DE
+                PUBLICATION : framework-dependent (léger, runtime requis),
+                self-contained (autonome, runtime inclus, RID requis) et fichier
+                unique. Console ici pour une vérification simple ; une appli de
+                bureau réelle ajouterait <TargetFramework>net10.0-windows</…> +
+                <UseWindowsForms>true</…> — les modes de publication sont
+                identiques. ClickOnce/MSIX/Store : voir le README (VS + certifs).
+  Fichier source : 01-packaging-desktop.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Packaging</RootNamespace>
+    <AssemblyName>Packaging</AssemblyName>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <!-- Évite l'avertissement single-file sur des API éventuelles ; ici inutile. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>

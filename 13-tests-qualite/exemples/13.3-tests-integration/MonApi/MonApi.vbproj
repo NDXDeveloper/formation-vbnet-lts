@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 13.3 : Tests d'intégration — Web API VB (SUT)
+  Description : Web API VB.NET (.NET 10) par contrôleurs, avec EF Core sur
+                SQLite. Le POINT D'ENTRÉE est une classe Public explicite
+                (Public Class Program) : faute de top-level statements, VB évite
+                le piège C# du « Program interne » — le projet de test peut
+                référencer Program directement pour WebApplicationFactory(Of Program).
+  Fichier source : 03-tests-integration.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MonApi</RootNamespace>
+    <AssemblyName>MonApi</AssemblyName>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

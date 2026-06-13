@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 17.8 (Cas 1) : test de non-régression = arbitre de la sémantique
+  Description : Tests xUnit encodant le comportement de RÉFÉRENCE (caractérisation) :
+                « une ligne illisible est ignorée, les autres sont sommées et la
+                moyenne est calculée ». Le test PASSE sur la traduction correcte et
+                ÉCHOUERAIT sur la fausse — ce que l'on prouve ici en épinglant la
+                valeur divergente. Le compilateur ne voit rien ; le test, si.
+  Fichier source : 08-cas-concrets.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Migration.Tests</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Migration\Migration.vbproj" />
+  </ItemGroup>
+
+</Project>

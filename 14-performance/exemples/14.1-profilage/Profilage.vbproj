@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 14.1 : Profilage
+  Description : Console VB.NET (.NET 10). Le gros de la 14.1 relève d'OUTILS
+                (VS Profiler, dotnet-counters/trace/dump/gcdump — documentés au
+                README). La part CODE est l'EXPOSITION d'une métrique
+                personnalisée via System.Diagnostics.Metrics (Meter + Counter),
+                observable en direct par `dotnet-counters`. Ici on l'émet et on
+                vérifie son émission.
+  Fichier source : 01-profilage.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Profilage</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

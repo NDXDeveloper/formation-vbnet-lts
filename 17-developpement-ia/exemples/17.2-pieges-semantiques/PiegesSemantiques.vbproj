@@ -1,0 +1,23 @@
+<!-- =========================================================================
+  Section 17.2 / 17.7 : Pièges sémantiques des opérateurs (« ça compile mais c'est faux »)
+  Description : Console VB.NET (.NET 10) démontrant les opérateurs « à double sens »
+                où une traduction LITTÉRALE du C# change silencieusement le
+                comportement (catégorie C de 17.7) — le compilateur ne voit rien,
+                seul un test/une exécution révèle la divergence :
+                  ^   = PUISSANCE en VB (XOR en C# → ici Xor)
+                  \   = division ENTIÈRE (/ renvoie toujours un flottant)
+                  Mod = reste (% en C#)
+                  And/Or n'ont PAS de court-circuit (AndAlso/OrElse, si).
+  Fichier source : 02-prompting-vbnet.md (et 07-limites-pieges.md)
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PiegesSemantiques</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

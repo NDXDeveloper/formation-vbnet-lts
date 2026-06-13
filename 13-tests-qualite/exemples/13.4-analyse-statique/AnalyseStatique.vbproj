@@ -1,0 +1,28 @@
+<!-- =========================================================================
+  Section 13.4 : Analyse statique (analyseurs Roslyn + .editorconfig)
+  Description : Bibliothèque VB.NET (.NET 10) montrant que le SOCLE Roslyn
+                (règles CAxxxx de qualité, IDExxxx de style) prend pleinement
+                VB.NET en charge. La rigueur se pilote par MSBuild
+                (EnableNETAnalyzers, EnforceCodeStyleInBuild) et par .editorconfig
+                (sévérité par règle). Le code déclenche volontairement deux
+                diagnostics (CA1822 et IDE0051) en AVERTISSEMENT — le build
+                réussit, les avertissements sont visibles et vérifiables.
+                (StyleCop/Roslynator = C# uniquement ; SonarQube = VB ok.)
+  Fichier source : 04-analyse-statique.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>AnalyseStatique</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>      <!-- activé par défaut depuis .NET 5 -->
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>  <!-- exécute aussi les règles IDE au build -->
+    <!-- TreatWarningsAsErrors resterait l'option pour BLOQUER ; ici on garde
+         les diagnostics en avertissement afin que l'exemple compile. -->
+  </PropertyGroup>
+
+</Project>

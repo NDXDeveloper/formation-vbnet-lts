@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 13.2 : Mocking — NSubstitute (VB.NET)
+  Description : Tests xUnit utilisant NSubstitute : Substitute.For renvoie
+                DIRECTEMENT la doublure (pas de .Object), .Returns préprogramme,
+                .Received(n) vérifie les appels, Arg.Any/Arg.Is pour les
+                correspondances. Syntaxe plus légère que Moq.
+  Fichier source : 02-mocking-tdd.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Commandes.Tests.NSubstitute</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Commandes\Commandes.vbproj" />
+  </ItemGroup>
+
+</Project>

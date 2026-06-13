@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 14.5 : Bonnes pratiques de performance en VB.NET
+  Description : Console VB.NET (.NET 10) condensant les réflexes distinctifs :
+                Option Strict On (liaison anticipée vs tardive), comparaisons de
+                chaînes Ordinal (sans allocation, sans dépendance culture) vs
+                ToLower (alloue), et pré-dimensionnement des collections. Mesures
+                à l'appui (GC.GetAllocatedBytesForCurrentThread).
+  Fichier source : 05-bonnes-pratiques.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BonnesPratiques</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Recommandation : Option Strict On à l'échelle du projet. -->
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+
+</Project>

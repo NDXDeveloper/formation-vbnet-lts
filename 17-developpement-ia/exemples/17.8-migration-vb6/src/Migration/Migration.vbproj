@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 17.8 (Cas 1) / 17.3 : Migration VB6 — On Error Resume Next
+  Description : Bibliothèque VB.NET (.NET 10) illustrant le piège SÉMANTIQUE de la
+                migration d'un « On Error Resume Next ». L'IA enveloppe souvent tout
+                le bloc dans UN SEUL Try/Catch — ce qui ABANDONNE le reste de la
+                boucle dès la première erreur, alors que Resume Next IGNORE la ligne
+                fautive et CONTINUE. Le code compile dans les deux cas : seul un test
+                de non-régression révèle la divergence. Les deux traductions cohabitent
+                ici pour que le test fasse l'arbitre.
+  Fichier source : 08-cas-concrets.md (et 03-migration-legacy-ia.md)
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Migration</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

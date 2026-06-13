@@ -1,0 +1,30 @@
+<!-- =========================================================================
+  Section 17.4 : Tests générés (vérifiant l'INTENTION) — projet de test
+  Description : Tests xUnit en VB.NET. Points VB que l'IA oublie (biais C#) et qui
+                sont ici respectés : attributs ENTRE CHEVRONS (<Fact>, <Theory>,
+                <InlineData>) et non entre crochets ([Fact]) ; lambdas avec Sub/
+                Function et non la flèche => (Assert.Throws prend un Sub). Les tests
+                encodent la SPÉCIFICATION (le barème), pas l'implémentation.
+  Fichier source : 04-generer-tests-doc.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Facturation.Tests</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Facturation\Facturation.vbproj" />
+  </ItemGroup>
+
+</Project>

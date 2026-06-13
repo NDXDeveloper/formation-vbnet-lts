@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 18.4 : Migrer vers C# — partie VB restante (console)
+  Description : Console VB.NET qui CONSOMME la bibliothèque C# migrée via une simple
+                référence de projet (interop hybride transparente). Elle compare le
+                « ^ » de VB (puissance) à l'équivalent C# correct (Math.Pow) et au
+                résultat d'une conversion littérale (XOR) — démonstration du piège
+                sémantique en miroir du module 17, côté VB→C#.
+  Fichier source : 04-migrer-vers-csharp.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ApplicationVb</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Référence CROISÉE VB -> C# : une solution mêle des projets monolingues. -->
+    <ProjectReference Include="..\CalculsCsharp\CalculsCsharp.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+# ============================================================================
+#  Section 15.3 : CI/CD — Azure DevOps Pipelines
+#  Description : Pipeline YAML avec les tâches UseDotNet@2 (SDK) et
+#               DotNetCoreCLI@2 (commandes dotnet). vmImage windows-latest requis
+#               pour WinForms/WPF ; ubuntu-latest pour les projets multiplateformes.
+#  Fichier source : 03-cicd.md
+# ============================================================================
+trigger:
+  branches:
+    include: [ main ]
+
+pool:
+  vmImage: 'ubuntu-latest'          # 'windows-latest' pour WinForms/WPF
+
+steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '10.0.x'
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      arguments: '-c Release'
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      arguments: '-c Release'

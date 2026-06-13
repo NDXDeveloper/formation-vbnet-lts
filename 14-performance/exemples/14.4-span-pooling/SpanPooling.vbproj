@@ -1,0 +1,25 @@
+<!-- =========================================================================
+  Section 14.4 : Span(Of T) / Memory(Of T) (consommation), pooling
+  Description : Console VB.NET (.NET 10). Consomme Span EN EXPRESSION ÉPHÉMÈRE
+                (Integer.Parse(s.AsSpan(...)), AsSpan().IndexOf, Read(buf.AsSpan()))
+                — un Span ne peut PAS être déclaré en variable/paramètre/champ
+                (BC30668). Mesure Substring (alloue) vs AsSpan (0 alloc). Montre
+                Memory(Of T) (déclarable, asynchrone) + .Span(i), puis le pooling
+                (ArrayPool, ObjectPool).
+  Fichier source : 04-span-pooling.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SpanPooling</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

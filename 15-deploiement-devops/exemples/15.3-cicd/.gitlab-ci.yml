@@ -1,0 +1,22 @@
+# ============================================================================
+#  Section 15.3 : CI/CD — GitLab CI
+#  Description : Stages et jobs exécutés par des runners, à partir de l'image
+#               Docker du SDK .NET. L'image SDK est Linux : parfaite pour une
+#               bibliothèque/Web API/console, mais inadaptée à WinForms/WPF
+#               (qui exige un runner Windows).
+#  Fichier source : 03-cicd.md
+# ============================================================================
+stages: [ build, test ]
+
+build:
+  stage: build
+  image: mcr.microsoft.com/dotnet/sdk:10.0
+  script:
+    - dotnet restore
+    - dotnet build -c Release --no-restore
+
+test:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:10.0
+  script:
+    - dotnet test -c Release

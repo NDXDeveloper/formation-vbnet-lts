@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 17.1 : Record C# halluciné → classe immuable VB écrite à la main
+  Description : Console VB.NET (.NET 10). L'IA, sommée de « déclarer un record en
+                VB », produit souvent « Public Record Personne(...) » — syntaxe
+                C# qui N'EXISTE PAS en VB (VB peut CONSOMMER un record C#, pas en
+                DÉCLARER, cf. 3.7). Cet exemple montre l'équivalent VB CORRECT : une
+                classe immuable écrite à la main, avec égalité par valeur, ToString
+                lisible et copie non destructive (équivalent du « with » de C#).
+  Fichier source : 01-pourquoi-ia-vbnet.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RecordImmuable</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

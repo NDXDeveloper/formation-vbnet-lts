@@ -1,0 +1,21 @@
+<!-- =========================================================================
+  Section 14.2 : Types valeur vs référence, allocations
+  Description : Console VB.NET (.NET 10) qui rend TANGIBLE la mécanique mémoire :
+                sémantique de copie (Structure vs Class), boxing/unboxing, et
+                surtout MESURE des allocations (GC.GetAllocatedBytesForCurrentThread)
+                pour prouver que les collections non génériques (boxing) allouent
+                bien plus que les génériques, et qu'itérer via IEnumerable boxe
+                l'énumérateur.
+  Fichier source : 02-types-allocations.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TypesAllocations</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

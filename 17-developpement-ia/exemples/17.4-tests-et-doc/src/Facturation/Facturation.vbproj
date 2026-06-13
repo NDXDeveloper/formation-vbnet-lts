@@ -1,0 +1,22 @@
+<!-- =========================================================================
+  Section 17.4 : Générer tests et documentation XML — bibliothèque
+  Description : Bibliothèque VB.NET (.NET 10) documentée avec ''' (le marqueur VB,
+                PAS /// du C# — le piège VB de la section). GenerateDocumentationFile
+                produit le fichier XML de documentation (Facturation.xml) — l'un des
+                artefacts dont la section traite. Le barème de remise sert de
+                SPÉCIFICATION testable : les tests (projet voisin) encodent ce
+                comportement ATTENDU, pas l'implémentation.
+  Fichier source : 04-generer-tests-doc.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Facturation</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <!-- Produit le fichier de documentation XML à partir des commentaires '''. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>

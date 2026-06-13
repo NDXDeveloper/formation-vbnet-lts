@@ -1,0 +1,27 @@
+<!-- =========================================================================
+  Section 17.8 (Cas 3) / 6.6 : WPF MVVM — source generators C#-only
+  Description : Bibliothèque VB.NET (.NET 10) montrant la BONNE façon d'écrire un
+                ViewModel CommunityToolkit.Mvvm en VB. L'IA propose volontiers les
+                attributs <ObservableProperty> / <RelayCommand> (source generators) —
+                mais ces générateurs sont RÉSERVÉS AU C# : en VB, les attributs sont
+                reconnus mais INERTES (rien n'est généré, la liaison n'a pas de cible,
+                et le compilateur ne dit rien). En VB on emploie directement les
+                CLASSES DE BASE : Inherits ObservableObject + SetProperty, et
+                New RelayCommand(AddressOf …). Bibliothèque pure (testable sans UI WPF :
+                ObservableObject/RelayCommand/ICommand ne dépendent pas de WPF).
+  Fichier source : 08-cas-concrets.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>DemoMvvm</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+</Project>

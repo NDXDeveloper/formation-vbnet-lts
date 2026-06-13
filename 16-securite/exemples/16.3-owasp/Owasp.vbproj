@@ -1,0 +1,27 @@
+<!-- =========================================================================
+  Section 16.3 : OWASP Top 10 — défenses applicatives
+  Description : Console VB.NET (.NET 10) illustrant trois défenses du Top 10:2025 :
+                (A05/A03) injection SQL — requête concaténée VULNÉRABLE vs
+                requête PARAMÉTRÉE qui neutralise l'attaque ' OR '1'='1 ;
+                (A05) validation d'entrée par DataAnnotations en liste blanche ;
+                (A05) encodage de sortie CONTEXTUEL (HTML / URL / JavaScript).
+                La base est un SQLite EN MÉMOIRE (aucune installation requise) ;
+                la défense est identique sur SQL Server via Microsoft.Data.SqlClient.
+  Fichier source : 03-owasp.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Owasp</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Base SQLite en mémoire (démonstration autonome). -->
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

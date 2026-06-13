@@ -1,0 +1,34 @@
+<!-- =========================================================================
+  Section 16.1 : Autorisation — tests d'intégration in-process
+  Description : Lance l'API en mémoire via WebApplicationFactory(Of Program) et
+                vérifie la matrice d'autorisation : 401 (sans jeton), 200 (scope
+                présent), 403 (scope absent), 204 (rôle admin), 403 (sans le rôle),
+                et la lecture des claims (/moi). Les jetons HS256 sont FORGÉS
+                localement (clé de démo partagée) — aucun IdP requis. Microsoft.-
+                IdentityModel.JsonWebTokens est disponible transitivement via la
+                référence de projet vers l'API (paquet JwtBearer).
+  Fichier source : 01-auth.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>AutorisationApi.Tests</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AutorisationApi\AutorisationApi.vbproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+# ============================================================================
+#  Section 15.3 : CI/CD — GitHub Actions
+#  Description : Workflow CI déclenché sur push/PR. actions/setup-dotnet installe
+#               le SDK, puis la colonne vertébrale restore → build → test
+#               (agnostique du langage) s'exécute. runs-on: windows-latest n'est
+#               requis que pour WinForms/WPF ; ubuntu-latest suffit pour une
+#               bibliothèque/Web API VB comme ici.
+#  Fichier source : 03-cicd.md
+# ============================================================================
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest          # lib multiplateforme ; windows-latest pour WinForms/WPF
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+          cache: true               # mise en cache NuGet intégrée
+      - run: dotnet restore
+      - run: dotnet build -c Release --no-restore
+      - run: dotnet test  -c Release --no-build

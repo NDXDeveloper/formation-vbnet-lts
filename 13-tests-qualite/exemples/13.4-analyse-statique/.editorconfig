@@ -1,0 +1,19 @@
+# ============================================================================
+#  Section 13.4 : Analyse statique — configuration .editorconfig
+#  Description : .editorconfig prend en charge C# ET VB. Préfixes : dotnet_…
+#                (tous langages), csharp_… (C# uniquement), visual_basic_…
+#                (VB uniquement). On fixe ici la sévérité de deux règles pour
+#                qu'elles apparaissent au build en AVERTISSEMENT.
+#  Fichier source : 04-analyse-statique.md
+# ============================================================================
+root = true
+
+[*.vb]
+# Règle de QUALITÉ (CA) : membre n'utilisant pas l'état d'instance → pourrait être Shared
+dotnet_diagnostic.CA1822.severity = warning
+
+# Règle de STYLE (IDE) : membre privé jamais utilisé
+dotnet_diagnostic.IDE0051.severity = warning
+
+# Exemple d'option de style propre à VB (préfixe visual_basic_…)
+visual_basic_preferred_modifier_order = Partial, Default, Private, NotInheritable:suggestion

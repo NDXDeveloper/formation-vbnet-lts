@@ -1,0 +1,38 @@
+<!-- =========================================================================
+  Section 16.4 : Dépendances et vulnérabilités (A03 — supply chain)
+  Description : Console VB.NET (.NET 10) qui DÉCLENCHE l'audit NuGet. Le projet
+                référence Newtonsoft.Json 12.0.3 — version affectée par une
+                vulnérabilité connue (déni de service, corrigée en 13.0.1). À la
+                restauration/build, NuGet émet un avertissement NU190x. L'audit
+                est étendu au graphe COMPLET (NuGetAuditMode=all : direct +
+                transitif). En production, on promeut NU1903/NU1904 en ERREURS
+                (voir le commentaire ci-dessous et le README).
+  Fichier source : 04-dependances-vulnerabilites.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Dependances</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+
+    <!-- Audit NuGet activé et couvrant TOUT le graphe (direct + transitif). -->
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+
+    <!-- PRODUCTION : faire ÉCHOUER le build sur les vulnérabilités élevées/critiques.
+         Laissé en commentaire pour que la démo BUILD malgré NU190x ; on l'active à la
+         demande en ligne de commande :  dotnet build -p:WarningsAsErrors=NU1903;NU1904
+    <WarningsAsErrors>$(WarningsAsErrors);NU1903;NU1904</WarningsAsErrors> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ⚠️ Paquet à vulnérabilité CONNUE (pour la démonstration de l'audit).
+         Newtonsoft.Json < 13.0.1 est affecté ; correctif = 13.0.1+. -->
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

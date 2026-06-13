@@ -1,0 +1,19 @@
+<!-- =========================================================================
+  Section 15.3 : CI/CD — bibliothèque à intégrer en continu
+  Description : Bibliothèque VB.NET (net10.0) — multiplateforme, donc compilable
+                aussi bien sur runner Linux que Windows. C'est le « citoyen .NET
+                de plein droit » qu'un pipeline (GitHub/Azure DevOps/GitLab)
+                traite comme un projet C# : restore → build → test → publish.
+  Fichier source : 03-cicd.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Calculs</RootNamespace>
+    <AssemblyName>Calculs</AssemblyName>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

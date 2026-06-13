@@ -1,0 +1,29 @@
+<!-- =========================================================================
+  Section 17.8 (Cas 3) : tests du ViewModel MVVM (sans UI)
+  Description : Tests xUnit vérifiant que le ViewModel écrit à la main FONCTIONNE
+                là où les source generators C#-only seraient restés inertes :
+                SetProperty lève bien PropertyChanged (et ne le lève pas pour une
+                valeur identique), et RelayCommand.Execute invoque la méthode.
+  Fichier source : 08-cas-concrets.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>DemoMvvm.Tests</RootNamespace>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DemoMvvm\DemoMvvm.vbproj" />
+  </ItemGroup>
+
+</Project>

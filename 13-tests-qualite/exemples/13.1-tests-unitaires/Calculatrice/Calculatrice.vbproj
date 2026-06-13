@@ -1,0 +1,20 @@
+<!-- =========================================================================
+  Section 13.1 : Tests unitaires — code testé (SUT)
+  Description : Bibliothèque VB.NET (.NET 10) servant de « système sous test »
+                aux trois projets de test (MSTest, NUnit, xUnit). Une
+                Calculatrice (Additionner, Diviser) et un ServiceCatalogue
+                asynchrone, suffisants pour illustrer AAA, tests paramétrés,
+                test d'exception et test asynchrone.
+  Fichier source : 01-tests-unitaires.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Calculatrice</RootNamespace>
+    <AssemblyName>Calculatrice</AssemblyName>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+<!-- =========================================================================
+  Section 15.5 : Cloud (essentiels via SDK)
+  Description : Console VB.NET (.NET 10) consommant les SDK Azure — qui ne sont
+                que des bibliothèques .NET (paquets Azure.*) : VB les utilise À
+                L'IDENTIQUE de C#. On construit les clients (Azure.Identity,
+                Blob Storage, Key Vault) et on lit leurs propriétés locales : les
+                appels RÉELS exigent un compte Azure et une identité (non requis
+                pour démontrer la consommation). ⚠️ Azure Functions = C#.
+  Fichier source : 05-cloud-essentiels.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CloudDemo</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.13.2" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.23.0" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>

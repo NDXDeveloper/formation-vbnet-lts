@@ -1,0 +1,24 @@
+<!-- =========================================================================
+  Section 14.3 : Garbage Collector
+  Description : Console VB.NET (.NET 10) illustrant la libération DÉTERMINISTE
+                (IDisposable + Using, pattern Dispose complet avec Finalize +
+                SuppressFinalize, IAsyncDisposable libéré « à la main » car pas
+                de Await Using en VB) et la mécanique des GÉNÉRATIONS (promotion,
+                comptage des collectes). Le mode Server GC est activé pour
+                vérifier que la configuration MSBuild prend effet (IsServerGC).
+  Fichier source : 03-gc.md
+========================================================================== -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GcDemo</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <!-- Réglage du GC sans toucher au code (vérifié via GCSettings.IsServerGC). -->
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
